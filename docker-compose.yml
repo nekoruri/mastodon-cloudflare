@@ -131,7 +131,7 @@ services:
   cloudflared:
     image: cloudflare/cloudflared:latest
     restart: always
-    env_file: .env.production
+    env_file: .env.cloudflared.production
     command: tunnel --no-autoupdate run
     networks:
       - external_network
