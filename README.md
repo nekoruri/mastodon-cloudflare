@@ -3,6 +3,8 @@ Mastodon with Cloudflare
 
 MastodonインスタンスをCloudflareと組み合わせて使うためのDocker Composeサンプルです。
 
+![techreport_202212_figs](https://user-images.githubusercontent.com/210445/210085873-0cd5c8ea-4ed8-4a28-af7d-0ff01a1caa60.png)
+
 ## HOWTO
 
 ### セットアップ
