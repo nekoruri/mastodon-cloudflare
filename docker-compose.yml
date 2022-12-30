@@ -5,6 +5,7 @@ services:
     build: docker/postgres
     image: postgres:14.6
     env_file: .env.db.production
+    command: postgres -c config_file=/etc/postgresql/postgresql.conf
     shm_size: 256mb
     networks:
       - internal_network
@@ -12,6 +13,7 @@ services:
       test: ['CMD', 'pg_isready', '-U', 'postgres']
     volumes:
       - ./postgres14:/var/lib/postgresql/data
+      - ./postgresql.conf:/etc/postgresql/postgresql.conf
     environment:
       - 'POSTGRES_HOST_AUTH_METHOD=trust'
 
